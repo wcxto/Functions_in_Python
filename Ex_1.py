@@ -28,3 +28,14 @@ def printGroceries(*args):
     	print(result)
 	else:
     	print('Нет продуктов')
+
+
+# Способ 2:
+
+def printGroceries(*args):
+	list_products = [i for i in args if type(i) == str and len(i) > 0]
+	if len(list_products) == 0:
+    	print("Нет продуктов")
+	else:
+    	for i in range(len(list_products)):
+        	print(f'{i+1}) {list_products[i]}')
