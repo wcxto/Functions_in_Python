@@ -39,3 +39,10 @@ def printGroceries(*args):
 	else:
     	for i in range(len(list_products)):
         	print(f'{i+1}) {list_products[i]}')
+
+
+# Способ 3:
+
+def printGroceries(*args):
+	ls = [i for i in args if type(i) == str and i not in ('', ' ')]
+	print('\n'.join([f'{num}) {i}' for num, i in enumerate(ls, 1)]) if ls else 'Нет продуктов')
