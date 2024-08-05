@@ -28,3 +28,9 @@ work_experience: 5 years
 def personalData(**kwargs):
 	for k, v in sorted(kwargs.items()):
     	print(f'{k}: {v}')
+
+
+# Способ 2:
+
+def personalData(**kwargs):
+	[print(f'{key}: {kwargs[key]}') for key in sorted(kwargs.keys())]
