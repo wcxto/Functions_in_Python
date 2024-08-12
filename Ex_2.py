@@ -34,3 +34,9 @@ def personalData(**kwargs):
 
 def personalData(**kwargs):
 	[print(f'{key}: {kwargs[key]}') for key in sorted(kwargs.keys())]
+
+
+# Способ 3:
+
+def personalData(**kwargs):
+	print('\n'.join(f'{k}: {v}' for k, v in sorted(kwargs.items())))
