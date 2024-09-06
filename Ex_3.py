@@ -17,3 +17,9 @@ a = list(map(int, input().split()))
 x = int(input())
 print(evaluate(a, x))
 
+
+# Способ 2:
+
+from functools import reduce
+evaluate = lambda coefficients, x: reduce(lambda s, a: s * x + a, coefficients, 0)
+print(evaluate([*map(int, input().split())], int(input())))
