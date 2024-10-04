@@ -23,3 +23,8 @@ print(evaluate(a, x))
 from functools import reduce
 evaluate = lambda coefficients, x: reduce(lambda s, a: s * x + a, coefficients, 0)
 print(evaluate([*map(int, input().split())], int(input())))
+
+
+# Способ 3:
+
+(lambda a, x: print(sum(map(lambda i: x**i[0] * int(i[1]), enumerate(a)))))(input().split()[::-1], int(input()))
