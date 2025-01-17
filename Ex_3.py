@@ -28,3 +28,16 @@ print(evaluate([*map(int, input().split())], int(input())))
 # Способ 3:
 
 (lambda a, x: print(sum(map(lambda i: x**i[0] * int(i[1]), enumerate(a)))))(input().split()[::-1], int(input()))
+
+
+# Способ 4:
+
+
+def evaluate(coefficients, x):
+	s = 0
+	for a in coefficients:
+    	s = s * x + a
+	return s
+c = [*map(int, input().split())]
+x = int(input())
+print(evaluate(c, x))
